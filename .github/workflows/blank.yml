@@ -33,6 +33,4 @@ jobs:
       - name: Build de uma imagem
         run: | 
           ls -all
-          docker build -t debiancesae:v1
-          docker images
 
