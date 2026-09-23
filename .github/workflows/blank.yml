@@ -36,5 +36,11 @@ jobs:
       - name: Build de uma imagem
         run: | 
           ls -all
-          ls -la
+          ls -la hello
+          cd hello
+          docker build -t sergio24082026cr.azurecr.io/eduardo:v1
+          docker login -u ${{ secrets.UTILIZADOR }} -p ${{ secrets.SEGREDO }} sergio24082026cr.azurecr.io
+          docker push sergio24082026cr.azurecr.io/eduardo:v1
+          echo Add other actions to build,
+          echo test, and deploy your project
 
